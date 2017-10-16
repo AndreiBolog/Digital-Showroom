@@ -76,6 +76,7 @@ body {
 	font-family: "Source Sans Pro";
 	font-weight: 400;
 	color: #6c7279;
+    margin: 0;
 }
 ul, ol {
 	margin: 0;
@@ -108,7 +109,7 @@ ul li {
 #header .header-content {
 	margin: 0 auto;
 	max-width: 1170px;
-	padding: 60px 0;
+	padding: 30px 0;
 	width: 100%;
 	-moz-transition: padding 0.3s;
 	-o-transition: padding 0.3s;
@@ -117,6 +118,9 @@ ul li {
 }
 #header .logo {
 	float: left;
+}
+.logo{
+    width: 40%;
 }
 #header.fixed {
 	background-color: rgba(0, 0, 0, 1);
@@ -143,7 +147,7 @@ ul li {
 	display: inline-block;
 }
 .navigation a {
-	color: rgba(0, 0, 0, 1);
+	color: rgba(255, 255, 255, 1);
 	font-size: 13px;
 	font-weight: 400;
 	margin-left: 40px;
@@ -294,7 +298,7 @@ ul li {
 -------------------------------------------------------------------------------*/
 
 .banner {
-	background-image: url(../images/banner.jpg);
+/*	background-image: url(../images/banner.jpg);*/
 	background-position: center top;
 	background-repeat: no-repeat;
 	-moz-background-size: cover;
@@ -307,7 +311,7 @@ ul li {
 	opacity: 0.5;
 }
 .banner-text {
-	padding-top: 33%;
+	padding-top: 10%;
 }
 .banner-text h1 {
 	color: #fff;
@@ -326,6 +330,23 @@ ul li {
 	margin-top: 10px;
 	margin-bottom: 80px;
 	text-transform: uppercase;
+}
+/*-------------------------------------------------------------------------------
+    Video
+/*------------------------------------------------------------------------------*/
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
 }
 /* ------------------------------------------------------------------------------
 	 Intro
@@ -352,7 +373,7 @@ ul li {
 	margin-top: 30px;
 }
 /* ------------------------------------------------------------------------------
-	 Services
+	 Silde-show
 -------------------------------------------------------------------------------*/
 .service-section {
 	padding-top: 100px;
@@ -368,6 +389,12 @@ ul li {
 	color: #e84545;
 	font-size: 36px;
 	padding-left: 15px;
+}
+.mySlides {
+    display:none;
+}
+.demo {
+    cursor:pointer;
 }
 /* ------------------------------------------------------------------------------
 	 Works
