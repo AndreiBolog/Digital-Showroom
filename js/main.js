@@ -110,4 +110,3 @@ let aboutDsgnBtn = document.querySelector('#Layer_2');
       video2.pause();
    }
 };
-
