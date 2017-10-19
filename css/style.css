@@ -10,6 +10,20 @@
 -------------------------------------------------------------------------------*/
 
 @import url(http://fonts.googleapis.com/css?family=Source%20Sans%20Pro:300,400,500,600,700);
+@font-face {
+    font-family: headings;
+    src: url(fonts/Fenix.ttf);
+}
+@font-face{
+    font-family: paragraph;
+    src: url(fonts/CenturyGothic.ttf);
+}
+h1,h2,h3,h4,h5,text{
+    font-family: headings;
+}
+p{
+    font-family: paragraph;
+}
 p {
 	font-size: 14px;
 	line-height: 22.4px;
@@ -566,7 +580,7 @@ div > #controls{
             }
 .video-button {
     background-color: rgba(0, 0, 0, 0); /* Green */
-    border: 2px solid black;
+    border: 2px solid white;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -577,7 +591,7 @@ div > #controls{
     cursor: pointer;
 }
 .black{
-    color: black;
+    color: white;
 }
 .vid-ctrl{
     position: absolute;
