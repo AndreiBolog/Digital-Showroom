@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/productstyle.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/font-icon.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <style>
+     .hide{
+            display: none;
+        }
+.modal1,.modal2 {
+    position: fixed;
+    z-index: 10;
+    padding-top: 1em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: white;
+    color: white;
+    margin:50px auto;
+    border: 0;
+    width: 60%;
+}
+.modal-exit1,.modal-exit2{
+    position: fixed;
+    top:10px;
+    right: 10px;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    border: 0;
+    font-size: 3em;
+    border-radius: 10%;
+}
+.modal-exit:hover{
+    background-color: #7b0000;
+}
+            iframe{
+                width: 100%;
+            }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+              <div class="header-content clearfix" >
+                <a class="logo" href="#"><img class="logo" src="images/logo.png" alt=""></a>
+                <nav class="navigation" role="navigation">
+                    <ul class="primary-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html/#slide-show" style="margin-right: 20px;">Showroom</a></li>
+                    </ul>
+                </nav> <a href="#" class="nav-toggle">Menu<span></span></a></div>
+        </header>
+    <section class="prodsect">
+   <img class="prodimg" src="images/chair.jpg" alt="The Pilgrim"/>
+    <article class="proddescr"><div>
+        <h1>The Pilgrim Stool</h1>
+        <p>The Pilgrim Stroller is easy to move, no
+matter where the next destination is.
+Tabrer's handle is waiting for a firm grip
+to lift it into the next room - a Pilgrim, a
+nomad who is always ready to travel.
+We like to call it 'nomadic design.</p>
+        <p>White or black food lacquered Handle
+in polished steel SH46 / 55 x D29cm.</p></div>
+        </article>
+    <article class="proddsgninfo"><div>
+        <h1>From Designers</h1>
+        <p><em>“Pilgrim is a series of shovels and a side table that can easily be
+arranged as needed. And to emphasize their flowability, we have
+provided them with a hanger. It clearly tells you that there is
+something that you want to move on, and it's also practical.”</em></p></div> </article>
+    <div class="btnbox">
+        <button class="sizebtn"><strong>Sizes</strong></button>
+        <button class="sizebtn">White 46cm</button>
+        <button class="sizebtn">White 55cm</button>
+        <button class="sizebtn">Black 46cm</button>
+        <button class="sizebtn">Black 55cm</button>
+        <button class="price"><strong>960 DKK</strong></button>
+        <button class="addcartbtn">Add to cart</button>
+        <button class="btn360 modal-button1">360<sup>o</sup> Video</button>
+        <button class="assemblyvidbtn modal-button2">Assembly Video</button>
+        </div>
+    <article class="prodinfo">
+        <div class="subprodinfo">
+            <h1>Product Information</h1>
+            <img class="techimg" src="images/pilgrim.png" alt="Pilgrim Technical Drawing"/>
+            <p>Solid lacquered ash tree with a 22 mm seat thickness and 44 mm wide leg. The handle is polished steel and mounted in such a way that the handle does not fall quickly down h as a handle on a bucket generally does. It is also seen by our collecting self-video.</p>
+            <button><i class="fa fa-download" aria-hidden="true"><strong>Product Manual Download</strong></i></button>
+           <button> <i class="fa fa-download" aria-hidden="true"><strong>Box Size &amp; Weight Download</strong></i></button>
+        </div>
+        </article>
+    </section>
+    <div class="modal1 hide">
+            <button class="modal-exit1">X</button>
+            <div class="modal-content">
+                <iframe src="https://player.vimeo.com/video/187991684" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </div>
+    <div class="modal2 hide">
+            <button class="modal-exit2">X</button>
+            <div class="modal-content">
+            <iframe src="https://player.vimeo.com/video/192585803" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- JS FILES -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var modal1 = document.querySelector('.modal1');
+        var modalBtn1 = document.querySelector('.modal-button1');
+        var modal2 = document.querySelector('.modal2');
+        var modalBtn2 = document.querySelector('.modal-button2');
+        var modalX1 = document.querySelector('.modal-exit1');
+                var modalX2 = document.querySelector('.modal-exit2');
+
+    modal1.addEventListener('click', function () {
+                modal1.classList.add('hide');
+            });
+        modal2.addEventListener('click', function () {
+                modal1.classList.add('hide');
+            });
+   modalX1.addEventListener('click', function () {
+                modal1.classList.add('hide');
+            });
+           modalX2.addEventListener('click', function () {
+                modal2.classList.add('hide');
+            });
+    modalBtn1.addEventListener('click',function(){
+       modal1.classList.remove('hide');
+    });
+    modalBtn2.addEventListener('click',function(){
+       modal2.classList.remove('hide');
+    });
+
+    </script>
+</body>
+</html>

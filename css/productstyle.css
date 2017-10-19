@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.prodsect{
+    display: grid;
+    width: 90%;
+    margin: 15% 5% 5% 5%;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas:
+        "prodimg prodimg proddescr proddescr proddescr"
+        "btnbox btnbox proddsgninfo proddsgninfo proddsgninfo"
+        "prodinfo prodinfo prodinfo prodinfo prodinfo";
+    grid-gap: 1em;
+}
+.prodimg{
+    grid-area: prodimg;
+    width: 35em;
+    height: 35em;
+}
+.proddescr{
+    grid-area: proddescr;
+}
+.proddescr div{
+grid-area: pddiv;
+    margin: 0 3em 0 3em;
+    padding: 1em 2em 1em 2em;
+    font-size: 1.5em;
+    background-color: #E6E6E6;
+}
+.proddescr h1{
+    text-align: center;
+}
+.proddescr p{
+    padding: 1em;
+    text-align: justify;
+}
+.proddsgninfo{
+    grid-area: proddsgninfo;
+}
+.proddsgninfo div{
+    margin:0 2em 0 2em;
+    padding: 1em;
+    font-size: 1.2em;
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+}
+.proddsgninfo h1{
+    text-align: center;
+}
+.proddsgninfo p{
+    padding: 1em;
+
+    text-align: justify;
+}
+.btnbox{
+    grid-area: btnbox;
+    height: 300px;
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-template-areas:
+        ". sizeh1 sizeh1 ."
+        "sb1 sb2 sb3 sb4"
+        ". pr pr ."
+        ". addcartbtn addcartbtn ."
+        ". btn360 avidbtn .";
+}
+.sizebtn{
+    font-size:15px;
+    border: 1px solid black;
+    background-color: white;
+}
+.sizebtn:hover{
+    background-color: black;
+    color: white;
+}
+.sizebtn:nth-child(1){
+    grid-area: sizeh1;
+    font-size: 20px;
+    text-align: center;
+}
+.sizebtn:nth-child(1):hover{
+    background-color: white;
+    color: black;
+}
+.sizebtn:nth-child(2){
+    grid-area: sb1;
+}
+.sizebtn:nth-child(3){
+    grid-area: sb2;
+}
+.sizebtn:nth-child(4){
+    grid-area: sb3;
+}
+.sizebtn:nth-child(5){
+    grid-area: sb4;
+}
+.price{
+    grid-area: pr;
+    background-color: white;
+    font-size: 30px;
+    border: 0;
+    text-align: center;
+    color: darkred;
+}
+.addcartbtn{
+    padding: 0.5em;
+    font-size:25px;
+    grid-area: addcartbtn;
+    color: darkred;
+    background-color: #e6e6e6;
+    border: 0;
+    border-radius: 10px;
+}
+.btn360{
+    padding: 1em;
+    font-size:20px;
+    grid-area: btn360;
+    background-color: black;
+    color:white;
+    opacity: 0.8;
+    border: 0;
+    border-radius: 10px;
+}
+.assemblyvidbtn{
+    padding: 1em;
+    font-size:20px;
+    grid-area: avidbtn;
+    background-color: black;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+}
+.prodinfo{
+    margin-top: -150px;
+    grid-area: prodinfo;
+    background-color: #e6e6e6;
+}
+.subprodinfo{
+    display: grid;
+     height: 100%;
+    font-size: 1.2em;
+    padding: 1em;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:
+        "infoh1 infoh1"
+        "infoimg infoimg"
+        "infop infop"
+        "infobtn1 infobtn2";
+    margin: 0 25% 0 25%;
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+}
+.subprodinfo h1{
+    grid-area: infoh1;
+    text-align: center;
+    padding: 1em 1em 0 1em;
+}
+.subprodinfo button{
+    margin-left: 5em;
+    margin-right: 5em;
+    background-color: white;
+    color: black;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+}
+.subprodinfo button:nth-child(1){
+    grid-area: infobtn1;
+}
+.subprodinfo button:nth-child(2){
+    grid-area: infobtn2;
+}
+.subprodinfo p{
+    grid-area: infop;
+    text-align: justify;
+    padding: 0 5em 1em 5em;
+}
+.techimg{
+    grid-area: infoimg;
+    width: 100%;
+    height: 250px;
+}

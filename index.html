@@ -5,136 +5,192 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="">
 <!--<![endif]-->
+
 <head>
-<meta charset="utf-8">
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Norrmade</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/flexslider.css">
-<link rel="stylesheet" href="css/jquery.fancybox.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/animate.min.css">
-<link rel="stylesheet" href="css/font-icon.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-</head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Norrmade</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/font-icon.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> </head>
 
 <body>
-<!-- header section -->
-<section class="banner" role="banner">
+    <!--header navigation -->
+    <section class="banner" role="banner">
+        <header id="header">
+            <div class="header-content clearfix">
+                <a class="logo" href="#"><img class="logo" src="images/logo.png" alt=""></a>
+                <nav class="navigation" role="navigation">
+                    <ul class="primary-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#slide-show">Showroom</a></li>
+                        <li><a href="product.html" target="_blank">Store<span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                    </ul>
 
-  <!--header navigation -->
-  <header id="header">
-    <div class="header-content clearfix"> <a class="logo" href="#"><img class="logo" src="images/logo.png" alt=""></a>
-      <nav class="navigation" role="navigation">
-        <ul class="primary-nav">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Showroom</a></li>
-          <li><a href="#store">Store</a></li>
-<!--          <li><a href="#teams">Our Team</a></li>-->
-<!--          <li><a href="#testimonials">Testimonials</a></li>-->
-<!--          <li><a href="#contact">Contact</a></li>-->
-        </ul>
-      </nav>
-      <a href="#" class="nav-toggle">Menu<span></span></a></div>
-  </header>
 
-  <!--header navigation -->
-  <!-- banner text -->
-  <div class="container">
-    <div class="col-md-10 col-md-offset-1" style="padding-top: 100px">
-      <div class="banner-text text-center">
-          <video poster="./images/img4.jpg" id="bgvid" playsinline autoplay muted once>
-<!--        <source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">-->
-        <source src="./video_about_us.mp4" type="video/mp4">
-</video>
-        <h1>Norrmade</h1>
-        <p>Nordic Signature</p>
-<!--        <nav role="navigation"> <a href="#services" class="banner-btn"><img src="images/down-arrow.png" alt=""></a></nav>-->
-      </div>
-      <!-- banner text -->
-    </div>
-  </div>
-</section>
-<!-- header section -->
-<!-- about section -->
- <section id="intro" class="section intro no-padding">
-  <div class="container-fluid">
-    <div class="row no-gutter">
-      <div class="flexslider">
-        <ul class="slides">
-          <li>
-            <div class="col-md-4">
-              <div class="avatar"> <img src="./images/img1.jpg" alt="" class="img-responsive"> </div>
-            </div>
-          </li>
-          <li>
-            <div class="col-md-4">
-              <div class="avatar"> <img src="./images/img2.jpg" alt="" class="img-responsive"> </div>
-            </div>
-            </li>
-            <li>
-            <div class="col-md-4">
-             <div class="avatar"> <img src="./images/img3.jpg" alt="" class="img-responsive"> </div>
-            </div>
-            </li>
-            <li>
-              <div class="col-md-4">
-             <div class="avatar"> <img src="./images/img4.jpg" alt="" class="img-responsive"> </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- about section
-<!-- Footer section -->
-<footer class="footer">
-  <div class="footer-top section">
-    <div class="container">
-      <div class="row">
-        <div class="footer-col col-md-6">
-          <h5>Our Office Location</h5>
-          <p>Collins Street West Victoria 8007 Australia.<br>
-            1800 1234 56789 / 98532100987<br>
-            support@flosix.com</p>
-          <p>Copyright © 2015 Flosix Inc. All Rights Reserved. Made with <i class="fa fa-heart pulse"></i> by <a href="http://www.designstub.com/">Designstub</a></p>
-        </div>
-        <div class="footer-col col-md-3">
-          <h5>Services We Offer</h5>
-          <ul>
-            <li><a href="#">Digital Strategy</a></li>
-            <li><a href="#">Websites</a></li>
-            <li><a href="#">Videography</a></li>
-            <li><a href="#">Social Media</a></li>
-            <li><a href="#">User Experience</a></li>
-          </ul>
+<!--                    <button class="modal-button">PLAY</button>-->
+                    <div class="my-modal hide">
+            <button class="modal-exit">X</button>
+            <div class="modal-content">
+<video class="pres-video" poster="./images/img4.jpg" id="bgvid" autoplay muted loop>
+                        <source src="video_about_us_gray_filter.mp4" type="video/mp4"> </video>
+                <button id="playpause"  type="button" class="video-button"> <span class="glyphicon glyphicon-play black"></span> </button>
+                        </div>
 
+
+                </div>
+                </nav> <a href="#" class="nav-toggle">Menu<span></span></a></div>
+        </header>
+
+        <!--header navigation -->
+        <!-- banner text -->
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1" style="margin-top: 20px;">
+                <div class="banner-text text-center">
+                    <video class="pres-video" poster="./images/img4.jpg" id="bgvid" autoplay muted loop>
+                        <source src="./video_about_us.mp4" type="video/mp4"> </video>
+                    <div class="vid-ctrl">
+                        <button id="playpause"  type="button" class="video-button modal-button"> <span class="glyphicon glyphicon-play black"></span> </button>
+            </div>
         </div>
-        <div class="footer-col col-md-3">
-          <h5>Share with Love</h5>
-          <ul class="footer-share">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-          </ul>
+
+                <div id="about-us" class="container">
+                    <div class="banner-text text-left">
+                        <h2 style="color: white">About Us</h2>
+                        <p style="color: white; opacity: 1">Our basic philosophy is to create something that appeals to people in their own special way - which adds something extra to them without adding anything superfluous.</p>
+                    </div>
+                </div>
+                <article class="vidinfo">
+                    <div class="aboutus">
+                        <p>In our design we draw on nomadism - the idea of always walking and being prepared to move on - and to do it with pleasure. Therefore, our designs are designed to fit into different contexts and to be easily moved. They will stand out in any interior, like objects that create both comfort and joy in our everyday lives.</p>
+                    </div>
+                    <div class="svgdiv">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="104px" height="208px" viewBox="0 0 104 208" enable-background="new 0 0 104 208" xml:space="preserve">
+                            <path opacity="0.4" d="M104-0.232C47,0.624,2.097,46.827,2.097,103.708S47,206.792,104,207.647V-0.232z" />
+                            <text x="35" y="100">About us</text>
+                        </svg>
+                        <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="104px" height="208px" viewBox="0 0 104 208" enable-background="new 0 0 104 208" xml:space="preserve">
+                            <path opacity="0.4" d="M0.124-0.252C-0.073-0.252,0-0.246,0-0.245v207.904c0,0.001-0.073,0.007,0.124,0.007
+                                       c57.16,0,103.496-46.544,103.496-103.959S57.284-0.252,0.124-0.252z" />
+                            <text x="10" y="100">
+                                <tspan x="10" dy="0">About our</tspan>
+                                <tspan x="10" dy="20">designers</tspan>
+                            </text>
+                        </svg>
+                    </div>
+                    <div class="aboutdesigners">
+                        <p>With more than 300 Danish and international design prices, Claus Jensen and Henrik Holbæk, also known as Tools®, are among the most award-winning designers in Europe. Their products are known for their simplicity and ingenuity, often with a little extra or surprising functionality. The designers have created most of the products in the brand Eva Solo.</p>
+                    </div>
+                </article>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- footer top -->
-</footer>
-<!-- Footer section -->
-<!-- JS FILES -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/retina.min.js"></script>
-<script src="js/modernizr.js"></script>
-<script src="js/main.js"></script>
+    </section>
+    <!-- header section -->
+    <!-- Slideshow Section -->
+    <section id="slide-show" class="section intro no-padding">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li> <img src="images/slideshow.jpg" alt="" class="img-responsive"> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /slideshow section -->
+    <!-- Main video section -->
+    <section id="intro" class="section intro no-padding">
+        <div class="container-fluid">
+            <video width="800" id="main">
+                <source src="video_about_us.mp4" type="video/mp4">
+                <source src="mov_bbb.ogg" type="video/ogg"> </video>
+            <div id="controls">
+                <button id="playpause2" onclick="togglePlayPause2()" type="button" class="video-button black"> <span class="glyphicon glyphicon-play"></span> </button>
+            </div>
+        </div>
+    </section>
+    <!-- /main video section -->
+    <!-- Instagram Feed Bar -->
+    <section id="intro" class="section intro no-padding">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li> <img src="images/instagram.jpg" alt="" class="img-responsive"> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /instagram Feed Bar -->
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="footer-top section">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-6">
+                        <h5>Contact Us</h5>
+                        <p style="opacity: 1"><span class="fa fa-envelope" style="margin-right: 5px"></span>info@norrmade.com</p>
+                        <p style="opacity: 1"><span class="fa fa-phone" style="margin-right: 5px"></span> +45 30 71 15 30</p>
+                        <p style="opacity: 1"><span class="fa fa-home" style="margin-right: 5px"></span>CVR: 30 33 84 13</p>
+                        <p style="opacity: 1">Måløv Teknikerby 18-20</p>
+                        <p style="opacity: 1">DK-2760 Måløv</p>
+                    </div>
+                    <div class="footer-col col-md-3">
+                        <h5>RETURN AND PAYMENT</h5>
+                        <ul>
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Delivery</a></li>
+                            <li><a href="#">Returns and Complaints</a></li>
+                            <li><a href="#">Payment</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-3">
+                        <h5>Share with Love</h5>
+                        <ul class="footer-share">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer section -->
+    <!-- JS FILES -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+           var modal = document.querySelector('.my-modal');
+        var modalBtn = document.querySelector('.modal-button');
+        var modalX = document.querySelector('.modal-exit');
+
+    modal.addEventListener('click', function () {
+                modal.classList.add('hide');
+            });
+    modalX.addEventListener('click', function () {
+                modal.classList.add('hide');
+            });
+    modalBtn.addEventListener('click',function(){
+        console.log(modalBtn);
+       modal.classList.remove('hide');
+    });
+    </script>
 </body>
+
 </html>

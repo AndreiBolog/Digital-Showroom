@@ -536,6 +536,60 @@ ul li {
 .quote .btn {
 	margin-top: 30px;
 }
+/* Info video */
+            .vidinfo{
+                display: grid;
+                width: 100%;
+                grid-template-columns: repeat(3,1fr);
+                grid-template-areas: "au svg ad";
+            }
+            .aboutus{
+                grid-area: au;
+            }
+            .aboutdesigners{
+                grid-area: ad;
+            }
+            .svgdiv{
+                display: grid;
+                grid-area: svg;
+                grid-template-columns: repeat(4,1fr);
+                grid-template-areas: ". l1 l2 .";
+            }
+            #Layer_1{
+                grid-area: l1;
+            }
+            #Layer_2{
+                grid-area: l2;
+            }
+            text{
+                fill: white;
+            }
+            p{
+                opacity: 0;
+            }
+            .fadein{
+                animation: fadein 2s linear forwards;
+            }
+            @keyframes fadein{
+                from{
+                    opacity: 0;
+                }
+                to{
+                    opacity: 1;
+                }
+            }
+            .fadeout{
+                animation: fadeout 2s linear forwards;
+            }
+            @keyframes fadeout{
+                from{
+                    opacity: 1;
+                }
+                to{
+                    opacity: 0;
+                }
+            }
+            /* ---- */
 /* ------------------------------------------------------------------------------
 	 Footer
 -------------------------------------------------------------------------------*/

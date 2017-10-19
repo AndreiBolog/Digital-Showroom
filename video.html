@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #progressBar {
+   border:1px solid #aaa;
+   color:#fff;
+   width:295px;
+   height:20px;
+}
+#progress {
+   background-color:#ff0000; // red
+   height:20px;
+   display:inline-block;
+}
+    </style>
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/font-icon.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <video width="800" id="main">
+            <source src="video_about_us.mp4" type="video/mp4">
+            <source src="mov_bbb.ogg" type="video/ogg">
+    </video>
+
+    <div id="controls">
+        <button id="playpause" onclick="togglePlayPause()" type="button" class="btn btn-default btn-xs">
+        <span class="glyphicon glyphicon-play"></span>
+     </button>
+<!--
+        <input id="volume" min="0" max="1" step="0.1" type="range" onchange="setVolume()" />
+        <button id="mute" onclick="toggleMute()">Mute</button>
+-->
+
+    </div>
+
+    <script>
+
+
+         // Grab a handle to the video
+        var video = document.getElementById("main");
+   // Turn off the default controls
+        video.controls = false;
+
+       function togglePlayPause() {
+ var playpause = document.getElementById("playpause");
+   if (video.paused || video.ended) {
+      playpause.title = "pause";
+      playpause.innerHTML = "pause";
+      video.play();
+   }
+   else {
+      playpause.title = "play";
+      playpause.innerHTML = "play";
+      video.pause();
+   }
+}
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

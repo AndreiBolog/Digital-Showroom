@@ -54,29 +54,60 @@ $(document).ready(function() {
 		nav.toggleClass('open');
 	});
 });
-var slideIndex = 1;
-showDivs(slideIndex);
+let aboutUsBtn = document.querySelector('#Layer_1 path');
+let aboutDsgnBtn = document.querySelector('#Layer_2 path');
+            let text1 = document.querySelector('.aboutus p');
+            let text2 = document.querySelector('.aboutdesigners p');
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+            aboutUsBtn.addEventListener('click',function(){
+                text1.classList.remove('fadeout');
+                text1.classList.add('fadein');
+                if(text2.className =='fadein'){
+                text2.classList.remove('fadein');
+                text2.classList.add('fadeout');}
+            });
+            aboutDsgnBtn.addEventListener('click',function(){
+                text2.classList.remove('fadeout');
+                text2.classList.add('fadein');
+                if(text1.className == 'fadein'){
+                text1.classList.remove('fadein');
+                text1.classList.add('fadeout');}
+            });
 
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
+         // Grab a handle to the video
+        var video = document.getElementById("bgvid");
+   // Turn off the default controls
+        video.controls = false;
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-  }
-  x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " w3-opacity-off";
+       function togglePlayPause() {
+ var playpause = document.getElementById("playpause");
+   if (video.paused || video.ended) {
+      playpause.title = "pause";
+      playpause.innerHTML = "pause";
+      video.play();
+   }
+   else {
+      playpause.title = "play";
+      playpause.innerHTML = "play";
+      video.pause();
+   }
 }
+// Grab a handle to the video
+        var video2 = document.getElementById("main");
+   // Turn off the default controls
+        video.controls = false;
+
+       function togglePlayPause2() {
+ var playpause = document.getElementById("playpause2");
+   if (video2.paused || video2.ended) {
+      playpause.title = "pause";
+      playpause.innerHTML = "pause";
+      video2.play();
+   }
+   else {
+      playpause.title = "play";
+      playpause.innerHTML = "play";
+      video2.pause();
+   }
+};
+
