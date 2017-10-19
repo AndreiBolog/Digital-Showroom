@@ -543,11 +543,23 @@ div > #controls{
                 grid-template-columns: repeat(4,1fr);
                 grid-template-areas: ". l1 l2 .";
             }
+
+svg:hover{
+    transform: scale(1.1);
+    transition: 0.8s;
+    cursor: pointer;
+}
+path{
+    stroke: white;
+    stroke-width: 2px;
+}
             #Layer_1{
                 grid-area: l1;
+                overflow: visible;
             }
             #Layer_2{
                 grid-area: l2;
+                overflow: visible;
             }
             text{
                 fill: white;

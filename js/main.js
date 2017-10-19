@@ -54,8 +54,8 @@ $(document).ready(function() {
 		nav.toggleClass('open');
 	});
 });
-let aboutUsBtn = document.querySelector('#Layer_1 path');
-let aboutDsgnBtn = document.querySelector('#Layer_2 path');
+let aboutUsBtn = document.querySelector('#Layer_1');
+let aboutDsgnBtn = document.querySelector('#Layer_2');
             let text1 = document.querySelector('.aboutus p');
             let text2 = document.querySelector('.aboutdesigners p');
 
